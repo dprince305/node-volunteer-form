@@ -1,0 +1,16 @@
+{
+  "name": "volunteer",
+  "version": "1.0.0",
+  "description": "volunteer registration system",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "prince Dholariya",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
+  }
+}

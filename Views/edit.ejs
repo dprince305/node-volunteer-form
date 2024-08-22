@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+
+    <style>
+
+        .container {
+            width: 500px;
+            background-color: #fff;
+            padding: 32px 24px;
+            font-size: 14px;
+            font-family: inherit;
+            color: #212121;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 3px rgba(0, 0, 0, 0.168);
+        }
+
+        .container button:active {
+            scale: 0.95;
+        }
+
+        .container .logo-container  {
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .container .form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .container .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .container .form-group input {
+            width: 100%;
+            padding: 10px 0px;
+            border-radius: 6px;
+            font-family: inherit;
+            border: 1px solid #ccc;
+        }
+
+        .container .form-group textarea {
+            width: 100%;
+            padding: 10px 0px;
+            border-radius: 6px;
+            font-family: inherit;
+            border: 1px solid #ccc;
+        }
+
+        .container .form-group input::placeholder {
+            opacity: 0.5;
+        }
+
+        .container .form-group input:focus {
+            outline: none;
+            border-color: #1778f2;
+        }
+
+        .container .form-submit-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: inherit;
+            color: #fff;
+            background-color: #212121;
+            border: none;
+            width: 100%;
+            padding: 12px 16px;
+            font-size: inherit;
+            gap: 8px;
+            margin: 12px 0;
+            cursor: pointer;
+            border-radius: 6px;
+            box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 3px rgba(0, 0, 0, 0.168);
+        }
+
+        .container .form-submit-btn:hover {
+            background-color: #313131;
+        }
+
+        .container .link {
+            color: #1778f2;
+            text-decoration: none;
+        }
+
+        .container .signup-link {
+            align-self: center;
+            font-weight: 500;
+        }
+
+        .container .signup-link .link {
+            font-weight: 400;
+        }
+
+        .container .link:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div style="display: flex; justify-content: center;">
+        <div class="container">
+            <div class="logo-container" style="font-size:25px;">
+               Edit  Volunteer Registration Systems
+            </div>
+
+            <form class="form" action="/updateVolunteer/<%= singleVolunteer.id %>" method="post">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text"  name="name" placeholder="Enter your Name" value="<%= singleVolunteer.name %>" >
+                </div>
+                 <br>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email"  name="email" placeholder="Enter your Email"  value="<%= singleVolunteer.email %>">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label>Phone No</label>
+                    <input type="number"  name="number" placeholder="Enter your Phone Number"  value="<%= singleVolunteer.number %>">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label>Skills</label>
+                    <textarea  name="skills" placeholder="Enter your Skills" value="<%= singleVolunteer.skills %>" ></textarea>
+                </div>
+            
+                <button class="form-submit-btn" type="submit">Save Data</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
